@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 13</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Consolas';
+        }
+        body{
+            background: rgba(48, 46, 46, 0.575);
+        }
+        .container{
+            width: 50%;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #000;
+            margin: 50px auto;
+            background: #000;
+            border-radius: 20px;
+        }
+        .container > .title{
+            color: #fff;
+            height: 25%;
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+            border-bottom: 2px solid rgba(204, 204, 204, 0.699);
+        }
+        .container > .opc{
+            height: 75%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        a,
+        input[type='button'],button{
+            width: 150px;
+            height: 50px;
+            color: rgba(184, 172, 172, 0.664);
+            background: #000;
+            border-radius: 50px;
+            text-align: left;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: auto;
+            text-align: center;
+        }
+        a:hover,
+        input[type='button']:hover,
+        button:hover{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Realizar un porgrama que realice operaciones basicas colocando un boton por cada operacion y despues poder realizar el ingreso de datos 
+    -->
+    <div class="container">
+        <div class="title">
+            <h1>Elige una opción</h1>
+        </div>
+        <div class="opc">
+            <input type="button" value="SUMAR" onclick="sumar()">
+            <input type="button" value="RESTAR" onclick="restar()">
+            <input type="button" value="MULTIPLICAR" onclick="multiplicar()">
+            <input type="button" value="DIVIDIR" onclick="dividir()">
+            <button><a href="./indexOperaciones.html">REGRESAR</a></button>
+        </div>
+    </div>
+    <a href="/index.html">Volver al Menu</a>
+    <script>
+        let n,n1,r;
+        function sumar(){
+            n = parseFloat(prompt('Ingresa un numero:'));
+            n1 = parseFloat(prompt('Ingresa un numero:'));
+            r = n + n1;
+            alert(`El resultado de la suma es: ${r}`);
+        }
+        function restar(){
+            n = parseFloat(prompt('Ingresa un numero:'));
+            n1 = parseFloat(prompt('Ingresa un numero:'));
+            r = n - n1;
+            alert(`El resultado de la resta es: ${r}`);
+        }
+        function multiplicar(){
+            n = parseFloat(prompt('Ingresa un numero:'));
+            n1 = parseFloat(prompt('Ingresa un numero:'));
+            r = n * n1;
+            alert(`El resultado de la multiplicación es: ${r}`);
+        }
+        function dividir(){
+            n = parseFloat(prompt('Ingresa un numero:'));
+            n1 = parseFloat(prompt('Ingresa un numero:'));
+            if (n1 === 0) {
+                alert('No se puede realizar una división entre cero');
+            } else {
+                r = n / n1;
+                alert(`El resultado de la división es: ${r}`);
+            }
+        }
+    </script>
+</body>
+</html>

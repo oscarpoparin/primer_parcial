@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 12</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Consolas';
+        }
+        body{
+            background: rgba(48, 46, 46, 0.575);
+        }
+        .container{
+            width: 50%;
+            height: 25vh;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background: #000;
+            border-radius: 20px;
+        }
+        input[type='button'],
+        button,a{
+            width: 150px;
+            height: 50px;
+            color: rgba(184, 172, 172, 0.664);
+            background: #000;
+            border-radius: 50px;
+            text-align: left;
+            font-size: 2rem;
+            text-decoration: none;
+            padding: auto;
+            text-align: center;
+            cursor: pointer;
+        }
+        input[type='button']:hover,
+        button:hover,a:hover{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html">Volver al Menu</a>
+    <script>
+        function iniciar() {
+            let n, n1, r, op;
+            op = prompt('¿Qué operación deseas realizar?');
+            switch (op) {
+                case 'suma':
+                    n = parseFloat(prompt('Ingresa un numero:'));
+                    n1 = parseFloat(prompt('Ingresa un numero:'));
+                    r = n + n1;
+                    alert(`El resultado de la suma es: ${r}`);
+                    break;
+                case 'resta':
+                    n = parseFloat(prompt('Ingresa un numero:'));
+                    n1 = parseFloat(prompt('Ingresa un numero:'));
+                    r = n - n1;
+                    alert(`El resultado de la resta es: ${r}`);
+                    break;
+                case 'multiplicacion':
+                    n = parseFloat(prompt('Ingresa un numero:'));
+                    n1 = parseFloat(prompt('Ingresa un numero:'));
+                    r = n * n1;
+                    alert(`El resultado de la multiplicación es: ${r}`);
+                    break;
+                case 'division':
+                    n = parseFloat(prompt('Ingresa un numero:'));
+                    n1 = parseFloat(prompt('Ingresa un numero:'));
+                    if (n1 === 0) {
+                        alert('No se puede realizar una división entre cero');
+                    } else {
+                        r = n / n1;
+                        alert(`El resultado de la división es: ${r}`);
+                    }
+                    break;
+                default:
+                    alert('No existe la opcion ingresada');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

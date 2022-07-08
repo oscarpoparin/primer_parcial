@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style_temperatura.css">
+    <title>Programas</title>
+</head>
+
+<body>
+    <h1>programas de los dias 23 y 24 de junio</h1>
+    <nav>
+        <li><a href="./index14.html">programa 1</a></li>
+        <li><a href="#" onclick="dos()">programa 2</a></li>
+        <li><a href="#" onclick="tres()">programa 3</a></li>
+        <li><a href="#" onclick="cuatro()">programa 4</a></li>
+        <li><a href="#" onclick="cinco()">programa 5</a></li>
+        <li><a href="#" onclick="seis()">programa 6</a></li>
+        <li><a href="#" onclick="siete()">programa 7</a></li>
+        <li><a href="#" onclick="ocho()">programa 8</a></li>
+        <li><a href="#" onclick="nueve()">programa 9</a></li>
+        <li><a href="#" onclick="diez()">programa 10</a></li>
+        <li><a href="#" onclick="once()">programa 11</a></li>
+        <li><a href="#" onclick="doce()">programa 12</a></li>
+    </nav>
+    <a href="/index.html">Volver al Menu</a>
+    <footer>
+        <p>Pagina creada por Oscar Reyes Ponciano</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function dos() {
+            let edad = prompt('Ingresa tu edad:');
+            if (edad >= 18 && edad <= 100) {
+                alert('Eres mayor de edad');
+            }
+        }
+        function tres() {
+            let edad = prompt('Ingresa tu edad:');
+            if (edad >= 18 && edad <= 100) {
+                alert('Eres mayor de edad');
+            } else {
+                alert('Eres menor de edad');
+            }
+        }
+        function cuatro() {
+            let edad = prompt('Ingresa tu edad:');
+            if (edad > 0 && edad <= 3) {
+                alert('Eres un Bebe');
+            } else if (edad > 3 && edad <= 10) {
+                alert('Eres un Niño');
+            } else if (edad > 10 && edad <= 17) {
+                alert('Eres un Joven');
+            } else if (edad > 17 && edad <= 30) {
+                alert('Eres un Adulto');
+            } else if (edad > 30 && edad <= 60) {
+                alert('Eres un Señor');
+            } else {
+                alert('Eres un adulto mayor');
+            }
+        }
+        function cinco() {
+            let edad = prompt('Ingresa tu edad:');
+            if (edad > 0 && edad <= 3)
+                alert('BEBE')
+            if (edad > 3 && edad <= 10)
+                alert('NIÑO')
+            if (edad > 10 && edad <= 17)
+                alert('JOVEN')
+            if (edad > 17 && edad <= 30)
+                alert('ADULTO')
+            if (edad > 30 && edad <= 60)
+                alert('SEÑOR')
+            if (edad > 60)
+                alert('ADULTO MAYOR')
+        }
+        function seis() {
+            let edad = prompt('Ingresa tu edad:');
+            if (edad < 4)
+                alert('BEBE')
+            else if (edad < 11)
+                alert('NIÑO')
+            else if (edad < 18)
+                alert('JOVEN')
+            else if (edad < 31)
+                alert('ADULTO')
+            else if (edad < 61)
+                alert('SEÑOR')
+            else if (edad > 60)
+                alert('ADULTO MAYOR')
+        }
+        function siete() {
+            document.write('Ejemplo 1 <br>');
+            for (i = 0; i <= 10; i++) {
+                document.write(`${i} <br>`);
+
+            }
+            document.write('<br><a href="index.html">regresar</a>')
+        }
+        function ocho() {
+            let n;
+            let tabla = parseInt(prompt('¿Cual tabla deseas conocer?'));
+            switch (tabla) {
+                case 1: {
+                    for (i = 1; i <= 10; i++) {
+                        n = tabla * i;
+                        document.write(`${tabla} * ${i} = ${n}<br>`);
+                    }
+                    break;
+                }
+                case 2: {
+                    for (i = 1; i <= 10; i++) {
+                        n = tabla * i;
+                        document.write(`${tabla} * ${i} = ${n}<br>`);
+                    }
+                    break;
+                }
+                case 3: {
+                    for (i = 1; i <= 10; i++) {
+                        n = tabla * i;
+                        document.write(`${tabla} * ${i} = ${n}<br>`);
+                    }
+                    break;
+                }
+                case 4: {
+                    for (i = 1; i <= 10; i++) {
+                        n = tabla * i;
+                        document.write(`${tabla} * ${i} = ${n}<br>`);
+                    }
+                    break;
+                }
+                case 5: {
+                    for (i = 1; i <= 10; i++) {
+                        n = tabla * i;
+                        document.write(`${tabla} * ${i} = ${n}<br>`);
+                    }
+                    break;
+                }
+                default: {
+                    document.write('Error')
+                    break;
+                }
+            }
+            document.write('<br><a href="index.html">regresar</a>')
+        }
+        function nueve() {
+            let j = 0;
+            while (j <= 10) {
+                document.write(`${j++} <br>`);
+            }
+            document.write('<br><a href="index.html">regresar</a>')
+        }
+        function diez() {
+            let valor = parseInt(prompt('Ingresa hasta que numerod deseas sumar'))
+            let contador = 1;
+            let suma = 0;
+            while (contador <= valor) {
+                suma += contador;
+                contador += 1;
+            }
+            document.write(`La suma es ${suma} <br>`);
+            document.write('<br><a href="index.html">regresar</a>')
+        }
+        function once() {
+            let opc = 0
+            let n1, n2, r;
+
+            do {
+                opc = parseInt(prompt('Seleccione una opcion: \n1.- Sumar \n2.- Restar \n3.-Multiplicar \n4.-Dividir'))
+                switch (opc) {
+                    case 1:
+                        n1 = parseInt(prompt('Ingresa el primer numero:'))
+                        n2 = parseInt(prompt('Ingresa el segundo numero:'))
+                        r = n1 + n2
+                        alert(`El resultado de la suma es: ${r}`)
+                        break;
+                    case 2:
+                        n1 = parseInt(prompt('Ingresa el primer numero:'))
+                        n2 = parseInt(prompt('Ingresa el segundo numero:'))
+                        r = n1 - n2
+                        alert(`El resultado de la resta es ${r}`)
+                        break;
+                    case 3:
+                        n1 = parseInt(prompt('Ingresa el primer numero:'))
+                        n2 = parseInt(prompt('Ingresa el segundo numero:'))
+                        r = n1 * n2
+                        alert(`El resultado de la multiplicacion es: ${r}`)
+                        break;
+                    case 4:
+                        n1 = parseInt(prompt('Ingresa el primer numero:'))
+                        n2 = parseInt(prompt('Ingresa el segundo numero:'))
+                        if (n2 == 0)
+                            alert('no se puede dividir entre cero')
+
+                        else
+                            r = n1 / n2
+                        alert(`El resultado de la division es: ${r}`)
+                        break;
+                }
+            } while (opc < 5)
+        }
+        function doce() {
+            let result = 0;
+            let i = 0;
+
+            do {
+                i = i + 1;
+                result = result + i;
+            } while (i < 2);
+
+            alert(`El resultado de la suma es: ${result}`)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 10</title>
+</head>
+<body>
+    <a href="/index.html">Volver al Menu</a>
+    <script>
+        let n,n1,r1,r2,r3,r4;
+        n = parseFloat(prompt('Ingresa un numero:'));
+        n1 = parseFloat(prompt('Ingresa un numero:'));
+        r1 = n + n1;
+        r2 = n - n1;
+        r3 = n * n1;
+        if(n1 === 0){
+            alert(`El resultado de la suma es: ${r1}\nEl resultado de la resta es: ${r2}\nEl resultado de la multiplicación es: ${r3}\nNo se pudo realizar la operacion`);
+        }else{
+            r4 = n / n1;
+            alert(`El resultado de la suma es: ${r1}\nEl resultado de la resta es: ${r2}\nEl resultado de la multiplicación es: ${r3}\nEl resultado de la división es: ${r4}`);
+        }
+    </script>
+</body>
+</html>

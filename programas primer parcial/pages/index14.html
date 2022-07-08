@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 14</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(95deg, #000, #fff);
+            font-family: 'Consolas';
+        }
+        .container {
+            background: #ccc;
+            width: 80%;
+            height: 70vh;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            border-radius: 50px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+        .container-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin-left: 150px;
+        }
+        input[type='text'] {
+            width: 250px;
+            height: 30px;
+            text-align: right;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            transition: 0.5s ease-in-out;
+        }
+        .btn{
+            margin-top: 50px;
+            padding: auto;
+            width: 480px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn>input[type='button'] {
+            width: 150px;
+            height: 40px;
+            font-size: .9rem;
+            border-radius: 15px;
+            background: #000;
+            color: #fff;
+            transition: 0.5s;
+        }
+        .btn>input[type='button']:hover {
+            background: rgba(31, 30, 30, 0.747);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+        .resultado {
+            width: 30%;
+            margin-left: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .resultado>p {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">
+            <h1>Convertidor de temperaturas</h1>
+        </div>
+        <div class="main">
+            <div class="container-main">
+                <input type="text" name="texto" id="temperatura" placeholder="Ingresa un valor">
+                <div class="btn">
+                    <input type="button" value="Fahrenheit a Celsius" onclick="fahrenheitACelsius()">
+                    <input type="button" value="Kelvin a Fahrenheit" onclick="kelvinAFahrenheit()">
+                    <input type="button" value="Celsius a Kelvin" onclick="celsiusAKelvin()">
+                    <input type="button" value="Celsius a Fahrenheit" onclick="celsiusAFahrenheit()">
+                    <input type="button" value="Fahrenheit a Kelvin" onclick="fahrenheitAKelvin()">
+                    <input type="button" value="Kelvin a Celsius" onclick="kelvinACelsius()">
+                </div>
+            </div>
+            <div class="resultado">
+                <p>El resultado es<br> <span id="resultado"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function fahrenheitACelsius() {
+            let t = parseFloat(document.getElementById('temperatura').value);
+            let c = (5 * (t - 32)) / 9;
+            document.getElementById('resultado').innerHTML = c;
+        }
+        function celsiusAFahrenheit() {
+            let t = parseFloat(document.getElementById('temperatura').value);
+            let f = (9 * t) / 5 + 32;
+            document.getElementById('resultado').innerHTML = f;
+        }
+        function celsiusAKelvin() {
+            let t = parseFloat(document.getElementById('temperatura').value);
+            let k = t + 273.15;
+            document.getElementById('resultado').innerHTML = k;
+        }
+        function kelvinACelsius() {
+            let t = parseFloat(document.getElementById('temperatura').value);
+            let c = t - 273.15;
+            document.getElementById('resultado').innerHTML = c;
+        }
+        function kelvinAFahrenheit() {
+            let t = parseFloat(document.getElementById('temperatura').value);
+            let f = ((9 * (t - 273.15)) / 5) + 32;
+            console.log(resultado);
+            document.getElementById('resultado').innerHTML = f;
+        }
+        function fahrenheitAKelvin() {
+            let t = parseFloat(document.getElementById('temperatura').value);
+            let k = ((5 * (t - 32)) / 9) + 273.15;
+            document.getElementById('resultado').innerHTML = k;
+        }
+    </script>
+</body>
+</html>
+

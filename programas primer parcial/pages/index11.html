@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 11</title>
+</head>
+<body>
+    <a href="/index.html">Volver al Menu</a>
+    <script>
+        let n,n1,r,op;
+        op = prompt('¿Qué operación deseas realizar?');
+        switch(op){
+            case 'suma':
+                n = parseFloat(prompt('Ingresa un numero:'));
+                n1 = parseFloat(prompt('Ingresa un numero:'));
+                r = n + n1;
+                alert(`El resultado de la suma es: ${r}`);
+                break;
+            case 'resta':
+                n = parseFloat(prompt('Ingresa un numero:'));
+                n1 = parseFloat(prompt('Ingresa un numero:'));
+                r = n - n1;
+                alert(`El resultado de la resta es: ${r}`);
+                break;
+            case 'multiplicacion':
+                n = parseFloat(prompt('Ingresa un numero:'));
+                n1 = parseFloat(prompt('Ingresa un numero:'));
+                r = n * n1;
+                alert(`El resultado de la multiplicación es: ${r}`);
+                break;
+            case 'division':
+                n = parseFloat(prompt('Ingresa un numero:'));
+                n1 = parseFloat(prompt('Ingresa un numero:'));
+                if(n1===0){
+                    alert('No se puede realizar una división entre cero');
+                }else{
+                    r = n / n1;
+                    alert(`El resultado de la división es: ${r}`);
+                }
+                break;
+            default:
+                alert('No existe la opcion ingresada');
+                break;   
+        }
+    </script>
+</body>
+</html>
